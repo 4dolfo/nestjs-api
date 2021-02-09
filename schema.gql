@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type MovieType {
+  id: ID!
+  name: String!
+  description: String!
+  added: Float!
+  poster: String!
+  rating: Float!
+}
+
+type Query {
+  movies: [MovieType!]!
+  search(input: String!): [MovieType!]!
+}
+
+type Mutation {
+  create(input: MovieInput!): MovieType!
+  update(input: MovieInput!, id: String!): MovieType!
+}
+
+input MovieInput {
+  name: String!
+  description: String!
+  added: Float!
+  poster: String!
+  rating: Float!
+}
